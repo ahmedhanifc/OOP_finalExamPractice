@@ -15,6 +15,22 @@ public class Student {
 		this.dateOfBirth = dateOfBirth;
 		this.grades = grades;
 	}
+	public Student(String firstName, String lastName) {
+		this(firstName, lastName,null,null);
+	}
+	public double calculateAverage() {
+		double sum = 0;
+		int counter = 0;
+		
+		for(double grade:grades) {
+			if(grade!=0) {
+				sum+=grade;
+				counter++;
+			}
+		}
+		if(sum == 0) return 0;
+		return sum / counter;
+	}
 	public Student(String firstName, String lastName,String dateOfBirth) {
 		this(firstName,lastName,dateOfBirth, new double[3]);
 	}

@@ -1,0 +1,12 @@
+package ex1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		UniversityManagement.addCourse(new Course("INFS3102", "OOP"));
+		UniversityManagement.enrollStudentInCourse(new Student("Ahmed", "Hanif", "2003-03-05"), null);
+
+	}
+
+}

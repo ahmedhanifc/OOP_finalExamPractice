@@ -1,0 +1,21 @@
+package ex1;
+
+import java.util.HashMap;
+
+public class UniversityManagement {
+	private static HashMap<String, Course> courses = new HashMap<String, Course>();
+	
+	public static void addCourse(Course course) {
+		if(course == null) {
+			System.out.println("Invalid Course Entry");
+			return;
+		}
+		if(courses.containsKey(course.getCode())) {
+			System.out.println("Course is also present in the system");
+			return;
+		}
+		courses.put(course.getCode(), course);
+		System.out.println("Course has been successfully added");
+	}
+
+}

@@ -1,0 +1,15 @@
+package ex1;
+
+import java.util.HashMap;
+
+public class UniversityManagement {
+	private static HashMap<String, Course> courses = new HashMap<String, Course>();
+	
+	public static void addCourse(Course course) {
+		if(course == null) return;
+		
+		if(courses.containsKey(course.getCode())) return;
+		
+	}
+
+}
